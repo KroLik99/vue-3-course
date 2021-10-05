@@ -22,9 +22,15 @@ let posts= [
             "tumeric."
         },
         {
-            id: 2,
-            title: "Using the Vue CDN",
-            body: "I'm baby chambray street art thundercats occupy four loko."
+            id: 3,
+            title: "How I mastered Vue",
+            body: "I'm baby chambray street art thundercats occupy four loko\n" +
+                "church-key disrupt. Shaman neutra bushwick chicharrones, tousled\n" +
+                "air plant lomo williamsburg. Listicle aesthetic whatever prism,\n" +
+                "ennui glossier asymmetrical scenester austin intelligentsia\n" +
+                "cronut raw denim umami mumblecore. Lo-fi meh austin, selfies\n" +
+                "hell of tacos 90's vinyl banh mi tbh bicycle rights mumblecore\n" +
+                "tumeric."
         }
         ]
 
@@ -32,15 +38,15 @@ Vue.createApp({
         data() {
             return {
                 name: "Isabelle",
-                links: ['home', 'portfolio','contact me']
+                links: ['home', 'portfolio','contact me'],
+                posts,
+                darkModeSet: false,
+                darkMode: {
+                    background: "midnightblue",
+                    color: "aliceblue"
+                }
             };
         },
     }
-).mount("header");
-Vue.createApp({
-    data(){
-        return{
-            posts: posts,
-        };
-    },
-}).mount("#blog");
+).mount("body");
+
