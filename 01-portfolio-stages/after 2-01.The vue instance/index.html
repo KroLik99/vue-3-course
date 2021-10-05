@@ -27,7 +27,7 @@
         <div class="blog_wrapper">
           <!-- BLOG SECTION -->
           <section id="blog">
-            <article v-for="item in posts">
+            <article v-for="item in posts" :key="item.id">
               <h3>{{item.title}}</h3>
               <p>
                 {{item.body}}
